@@ -90,11 +90,19 @@ class Book
     }
     
     /**
-     * Prints the book's details. This is for 2.87
+     * Prints the book's details. This is for 2.87 and 2.89
      */
     public void printDetails() 
     {
-        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Pages: " + pages);
+        if (refNumber.length() > 0) {
+            System.out.println("Reference Number: " + refNumber);
+        } else {
+            System.out.println("Reference Number: zzz");
+        }
+        
     }
     
 }
