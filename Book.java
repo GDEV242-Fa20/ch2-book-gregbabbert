@@ -30,11 +30,15 @@ class Book
 
     // Add the methods here ...
     /**
-     * Sets the reference number. This is for 2.88
+     * Sets the reference number. This is for 2.88 and 2.90
      */
     public void setRefNumber(String ref) 
     {
-        refNumber = ref;
+        if (ref.length() >= 3) {
+            refNumber = ref;
+        } else {
+            System.out.println("Error! Reference number not long enough");
+        }
     }
     
     /**
