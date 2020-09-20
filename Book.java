@@ -15,6 +15,8 @@ class Book
     private int pages;
     //For 2.88
     private String refNumber;
+    //For 2.91
+    private int borrowed;
 
     /**
      * Set the author and title fields when this object
@@ -26,6 +28,7 @@ class Book
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
     }
 
     // Add the methods here ...
@@ -47,6 +50,22 @@ class Book
     public String getRefNumber() 
     {
         return refNumber;
+    }
+    
+    /**
+     * Increase borrowed number. This is for 2.91
+     */
+    public void increaseBorrowed() 
+    {
+        borrowed += 1;
+    }
+    
+    /**
+     * Gets the number of times borrowed. This is for 2.91
+     */
+    public int getBorrowedNumber() 
+    {
+        return borrowed;
     }
     
     /**
@@ -94,7 +113,7 @@ class Book
     }
     
     /**
-     * Prints the book's details. This is for 2.87 and 2.89
+     * Prints the book's details. This is for 2.87, 2.89, 2.91
      */
     public void printDetails() 
     {
@@ -106,7 +125,7 @@ class Book
         } else {
             System.out.println("Reference Number: zzz");
         }
-        
+        System.out.println("Amount of times borrowed: " + borrowed);
     }
     
 }
