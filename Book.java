@@ -3,8 +3,8 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author Bill Crosbie
- * @version Feb 4, 2019
+ * @author Greg Babbert
+ * @version September 19, 2020
  */
 class Book
 {
